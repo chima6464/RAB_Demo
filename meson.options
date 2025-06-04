@@ -1,0 +1,11 @@
+# tc_ble_mesh-master/meson_options.txt
+# NOTE: Do not use underscores as meson parser cannot recognize it!
+option('ble_stack_variant',
+  type : 'combo',
+  choices : ['standard','ble8278'], # Or whatever choices you defined
+  value : 'standard',                 # Your default value
+  description : 'Select the BLE stack library variant to build from firmware/stack/.'
+)
+# Add other global options if needed, e.g., for optimization or build type,
+# even if no executable is built at the root level yet.
+option('build_type', type : 'combo', choices : ['debug', 'release', 'debugoptimized'], value : 'debugoptimized', description : 'Select build type.')
