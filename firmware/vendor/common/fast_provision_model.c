@@ -30,6 +30,7 @@
 #include "proj_lib/sig_mesh/app_mesh.h"
 #include "fast_provision_model.h"
 #include "version.h"
+#include "gy.h"
 
 #define FAST_PROVISION_TIMEOUT 		60*1000*1000
 #if FAST_PROVISION_ENABLE

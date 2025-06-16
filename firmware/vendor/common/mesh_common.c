@@ -44,6 +44,7 @@
 #include "mesh_config.h"
 #include "directed_forwarding.h"
 #include "certify_base/certify_base_crypto.h"
+#include "gy.h"
 #if MI_API_ENABLE
 #include "./mi_api/mijia_pub_proc.h"
 #endif

@@ -48,6 +48,7 @@
 #include "vendor/common/blt_soft_timer.h"
 #include "proj/drivers/rf_pa.h"
 #include "../common/remote_prov.h"
+#include "gy.h"
 #if MI_API_ENABLE
 #include "vendor/common/mi_api/telink_sdk_mible_api.h"
 #include "vendor/common/mi_api/libs/mijia_profiles/mi_service_server.h"

@@ -1,3 +1,5 @@
+# project('Mesh', 'c')
+
 module_sources_mesh = files(
     'app_att.c',
     'app_config_8258.h',
@@ -8,11 +10,15 @@ module_sources_mesh = files(
     # 'main.c'
 )
 
+gy_inc = include_directories('../gy')
+lc_inc = include_directories('../lc')
+
 module_mesh_includes = include_directories('.')
 
 lib_mesh = static_library('Mesh', 
-    module_sources_mesh,
-    include_directories : [module_mesh_includes, global_inc])
+    sources: module_sources_mesh,
+    include_directories : [module_mesh_includes, global_inc, gy_inc, lc_inc]
+)
 
 lib_mesh_dep = declare_dependency(
     link_with : lib_mesh,

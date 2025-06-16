@@ -1306,10 +1306,10 @@ u8 change_capa_act_to_start_act(u16 capa_act,u8 out_flag)
 
 u8 get_pubkey_oob_info_by_capa(mesh_prov_oob_str *p_prov_oob)
 {
-	u8 pubkey =0;
+	// u8 pubkey =0;
 	u8 oob_type =0;
 	pro_trans_capa * p_capa = &(p_prov_oob->capa);
-	pubkey = p_capa->pubKeyType;
+	// pubkey = p_capa->pubKeyType;
 	oob_type = p_capa->staticOOBType;
 	if(oob_type){ // if the type is static oob type ,so we will use the oob type 
 		p_prov_oob->prov_key = MESH_STATIC_OOB;
@@ -2486,8 +2486,8 @@ u8  mesh_loop_provision_end_process()
 		if(!mesh_pr_sts_work_or_not())
 		#endif
 		{
-			u16 adr_store ;
-			adr_store = provision_mag.unicast_adr_last;
+			// u16 adr_store ;
+			// adr_store = provision_mag.unicast_adr_last;
 			provision_mag.unicast_adr_last += prov_para.ele_cnt;
 			prov_para.link_id_filter =0;
 			provision_mag_cfg_s_store();

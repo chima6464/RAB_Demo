@@ -32,7 +32,7 @@
 #include "lighting_model.h"
 #include "sensors_model.h"
 #include "light.h"
-
+#include "gy.h"
 
 #if (MD_LIGHT_CONTROL_EN)
 model_light_lc_t       model_sig_light_lc;

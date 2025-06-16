@@ -30,6 +30,8 @@
 #include "vendor/common/generic_model.h"
 #include "vendor/common/scene.h"
 #include "light.h"
+#include "gy.h"
+#include "lc.h"
 #if HOMEKIT_EN
 #include "vendor/common/led_cfg.h"
 #endif
@@ -1473,7 +1475,7 @@ void proc_led(void)
                 {
                 	if(gy_vendor_model_info.emergency_event_flag == gy_emergency_event_execute)
                 	{
-                		led_no = 0;//新修改的功能：开启emergency功能之后没有时间限制，只要没接收到停止指令，就一直闪烁
+                		led_no = 0;//锟斤拷锟睫改的癸拷锟杰ｏ拷锟斤拷锟斤拷emergency锟斤拷锟斤拷之锟斤拷没锟斤拷时锟斤拷锟斤拷锟狡ｏ拷只要没锟斤拷锟秸碉拷停止指锟筋，锟斤拷一直锟斤拷烁
                 	}
 
                     #ifdef CB_USER_PROC_LED_ONOFF_DRIVER  // user can define in "user_app_config.h"

@@ -29,6 +29,7 @@
 #include "vendor/common/app_provison.h"
 #include "proj/common/types.h"
 #include "app_privacy_beacon.h"
+#include "gy.h"
 
 u8  provision_In_ccc[2]={0x01,0x00};// set it can work enable 
 u8  provision_Out_ccc[2]={0x00,0x00}; 

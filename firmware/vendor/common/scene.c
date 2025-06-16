@@ -33,6 +33,7 @@
 #include "lighting_model_xyL.h"
 #include "lighting_model_LC.h"
 #include "scene.h"
+#include "gy.h"
 
 
 #if (MD_SCENE_EN)

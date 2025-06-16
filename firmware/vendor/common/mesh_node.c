@@ -35,6 +35,7 @@
 #include "proj_lib/ble/service/ble_ll_ota.h"
 
 #include "lighting_model.h"
+#include "gy.h"
 
 #if (ALI_MD_TIME_EN)
 #include "user_ali_time.h"
@@ -3532,7 +3533,7 @@ int mesh_get_netkey_idx_appkey_idx(mesh_bulk_cmd_par_t *p_cmd)
 }
 
 // common
-static const u16 loop_interval_us = 10*1000;
+// static const u16 loop_interval_us = 10*1000;
 int is_mesh_latency_window()
 {
 #if (__TL_LIB_8269__ || (MCU_CORE_TYPE == MCU_CORE_8269))

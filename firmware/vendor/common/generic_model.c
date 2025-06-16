@@ -44,6 +44,7 @@
 #include "directed_forwarding.h"
 #include "app_privacy_beacon.h"
 #include "subnet_bridge.h"
+#include "gy.h"
 /** @addtogroup Mesh_Common
   * @{
   */
@@ -272,7 +273,7 @@ int mesh_cmd_sig_g_onoff_set(u8 *par, int par_len, mesh_cb_fun_par_t *cb_par)
 	}
 #endif
 	/*
-	if(par[0] == 1)//¿ªµÆ
+	if(par[0] == 1)//ï¿½ï¿½ï¿½ï¿½
 	{
 		if(!(cb_par->retransaction))
 		{
@@ -280,13 +281,13 @@ int mesh_cmd_sig_g_onoff_set(u8 *par, int par_len, mesh_cb_fun_par_t *cb_par)
 		}
 	}
 	*/
-	if(par[0] == 0)//¹ØµÆ
+	if(par[0] == 0)//ï¿½Øµï¿½
 	{
 		if(!(cb_par->retransaction))
 		{
-			if(gy_i2c_info.sensor_type == gy_i2c_sensor_2)//Èç¹ûÊÇÎ¢²¨ÈË¸Ð
+			if(gy_i2c_info.sensor_type == gy_i2c_sensor_2)//ï¿½ï¿½ï¿½ï¿½ï¿½Î¢ï¿½ï¿½ï¿½Ë¸ï¿½
 			{
-				gy_sensor_freeze_time_count_down = 20;//¹ØµÆÖ®ºóËøËÀ2Ãë£¨20*100ms£©
+				gy_sensor_freeze_time_count_down = 20;//ï¿½Øµï¿½Ö®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½2ï¿½ë£¨20*100msï¿½ï¿½
 			}
 			else
 			{
@@ -296,7 +297,7 @@ int mesh_cmd_sig_g_onoff_set(u8 *par, int par_len, mesh_cb_fun_par_t *cb_par)
 //			gy_public_info.standby_recorvery_flag=0;
 		}
 	}
-	else if(par[0] == 1)//¿ªµÆ
+	else if(par[0] == 1)//ï¿½ï¿½ï¿½ï¿½
 	{
 		if(!(cb_par->retransaction))
 		{
@@ -315,7 +316,7 @@ int mesh_cmd_sig_g_onoff_set(u8 *par, int par_len, mesh_cb_fun_par_t *cb_par)
 		return err;
 	}
 	/*
-	if(par[0] == 0)//¹ØµÆ
+	if(par[0] == 0)//ï¿½Øµï¿½
 	{
 		if(!(cb_par->retransaction))
 		{
@@ -479,7 +480,7 @@ int mesh_cmd_sig_g_level_set(u8 *par, int par_len, mesh_cb_fun_par_t *cb_par)
 
     if(cb_par->op == G_DELTA_SET/*0x0982*/ || cb_par->op == G_DELTA_SET_NOACK/*0x0A82*/)
     {
-    	if(cb_par->model_idx == 0)//Èç¹ûÊÇµ÷½ÚÁÁ¶È
+    	if(cb_par->model_idx == 0)//ï¿½ï¿½ï¿½ï¿½Çµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     	{
     		mesh_cmd_g_level_delta_t *gy_set_p = (mesh_cmd_g_level_delta_t*)par;
     		if(light_res_sw_save[0].level[0].onoff == 0 && gy_set_p->level <= 0)

@@ -30,6 +30,7 @@
 #include "proj_lib/sig_mesh/app_mesh.h"
 #include "vendor_model.h"
 #include "fast_provision_model.h"
+#include "gy.h"
 
 #if ALI_MD_TIME_EN
 #include "user_ali_time.h"

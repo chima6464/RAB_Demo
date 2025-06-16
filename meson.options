@@ -1,5 +1,16 @@
-# tc_ble_mesh-master/meson_options.txt
-# NOTE: Do not use underscores as meson parser cannot recognize it!
+# NOTE: Do not use underscores for Choices as meson parser cannot recognize it!
+option('product_family', type : 'combo',
+  choices : ['RABBlueController', 'RabHighbayNewId'],
+  value : 'RABBlueController',
+  description : 'Select the product family to build.'
+)
+
+option('product_pid', type : 'combo',
+  choices : ['108F', '1091'],
+  value : '108F',
+  description : 'Enter the Product ID (e.g., 108F, 1091).'
+)
+
 option('ble_stack_variant',
   type : 'combo',
   choices : ['standard','ble8278'], # Or whatever choices you defined

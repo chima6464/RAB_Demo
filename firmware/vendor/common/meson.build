@@ -87,12 +87,16 @@ module_sources_common = files(
 
 )
 
+gy_inc = include_directories('../gy')
+lc_inc = include_directories('../lc')
+
 module_sources_common_includes = include_directories('.')
 
 lib_common = static_library('Common', 
     module_sources_common,
     c_args: ['-DAIS_ENABLE=0'],
-    include_directories : [module_sources_common_includes, global_inc])
+    include_directories : [module_sources_common_includes, global_inc, gy_inc, lc_inc]
+    )
 
 lib_common_dep = declare_dependency(
     link_with : lib_common,
